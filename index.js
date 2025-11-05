@@ -1,4 +1,5 @@
 import express from "express";
+import { log } from "node:console";
 
 let api = express();
 
@@ -8,6 +9,8 @@ api.get("/", (req, res) => {
 
 api.get("/user", (req, res) => {
     res.json( "Renner Medeiros");
+    console.log('Usuário Logado');
+    
 })
 
 api.listen(3000, () => {
